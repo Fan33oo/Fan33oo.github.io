@@ -9,6 +9,15 @@ export const metadata: Metadata = {
     default: "Dfan | Personal Homepage",
     template: "%s | Dfan"
   },
+  icons: {
+    icon: [
+      {
+        url: "/favicon.svg?v=20260609",
+        type: "image/svg+xml"
+      }
+    ],
+    shortcut: ["/favicon.svg?v=20260609"]
+  },
   description:
     "Dfan 的个人主页，记录技术笔记、工程实验和持续构建中的想法。",
   openGraph: {

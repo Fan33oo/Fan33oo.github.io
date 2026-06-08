@@ -384,8 +384,25 @@ pre {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 0.94rem;
   line-height: 1.8;
+  height: calc((0.94rem * 1.8 * 3) + 36px);
+  overflow: hidden;
   padding: 18px;
   white-space: pre-wrap;
+}
+
+.typing-code {
+  display: block;
+  height: calc(1.8em * 3);
+}
+
+.typing-caret {
+  display: inline-block;
+  width: 0.58em;
+  height: 1.15em;
+  margin-left: 2px;
+  transform: translateY(0.18em);
+  border-left: 2px solid currentColor;
+  animation: caret-blink 1s steps(2, start) infinite;
 }
 
 .section {
@@ -564,6 +581,18 @@ h3 {
 
   to {
     transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typing-caret {
+    animation: none;
   }
 }
 
